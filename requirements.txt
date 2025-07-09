@@ -1,0 +1,5 @@
+cryptography
+paramiko
+PyQt5
+SQLAlchemy
+bcrypt

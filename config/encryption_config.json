@@ -1,0 +1,6 @@
+{
+    "key_size": 32,
+    "iv_size": 16,
+    "salt_size": 16,
+    "iterations": 100000
+}

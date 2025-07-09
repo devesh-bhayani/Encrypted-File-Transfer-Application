@@ -1,0 +1,26 @@
+2025-07-07 02:14:27,754 - EncryptedFileTransferApp - INFO - Starting Encrypted File Transfer Application
+2025-07-07 02:14:27,757 - EncryptedFileTransferApp - INFO - Database initialized successfully
+2025-07-07 02:15:15,610 - EncryptedFileTransferApp - ERROR - Unhandled exception in main: name 'time' is not defined
+2025-07-07 02:15:15,614 - EncryptedFileTransferApp - ERROR - Traceback (most recent call last):
+  File "C:\Users\ADMIN\Desktop\Cybersecurity\Encrypted File transfer Application\encrypted_file_transfer\src\main.py", line 84, in main
+    if main_window.show_login():
+       ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ADMIN\Desktop\Cybersecurity\Encrypted File transfer Application\encrypted_file_transfer\src\gui\main_window.py", line 227, in show_login
+    self.log_message(f"Welcome, {self.current_user.username}!")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\Desktop\Cybersecurity\Encrypted File transfer Application\encrypted_file_transfer\src\gui\main_window.py", line 332, in log_message
+    self.log_text.append(f"[{time.strftime('%H:%M:%S')}] {message}")
+                             ^^^^
+NameError: name 'time' is not defined. Did you forget to import 'time'?
+
+2025-07-07 02:15:46,902 - EncryptedFileTransferApp - INFO - Starting Encrypted File Transfer Application
+2025-07-07 02:15:46,904 - EncryptedFileTransferApp - INFO - Database initialized successfully
+2025-07-07 02:15:58,832 - EncryptedFileTransferApp - INFO - Application started successfully
+2025-07-07 02:16:22,826 - EncryptedFileTransferApp - INFO - Application exited with code: 0
+2025-07-09 10:16:12,524 - EncryptedFileTransferApp - INFO - Starting Encrypted File Transfer Application
+2025-07-09 10:16:12,543 - EncryptedFileTransferApp - INFO - Database initialized successfully
+2025-07-09 10:23:34,590 - EncryptedFileTransferApp - INFO - Application started successfully
+2025-07-09 10:31:59,545 - EncryptedFileTransferApp - INFO - Starting Encrypted File Transfer Application
+2025-07-09 10:31:59,546 - EncryptedFileTransferApp - INFO - Database initialized successfully
+2025-07-09 10:35:28,428 - EncryptedFileTransferApp - INFO - Application started successfully
+2025-07-09 10:35:30,365 - EncryptedFileTransferApp - INFO - Application exited with code: 0

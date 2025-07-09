@@ -1,0 +1,10 @@
+{
+    "database": {
+        "type": "sqlite",
+        "path": "config/database.db"
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "logs/app.log"
+    }
+}
