@@ -1,87 +1,42 @@
 # Encrypted File Transfer Application
 
-This project is a comprehensive Encrypted File Transfer Application built in Python. It provides a secure and user-friendly way to transfer files using AES encryption and SFTP protocols.
+A secure file transfer application built in Python: **AES-256 encryption** over both a
+custom socket protocol and **SFTP**, with a **PyQt5** desktop GUI.
 
 ## Features
 
--   **Secure File Transfer**: Utilizes AES-256 encryption to protect file content during transmission.
--   **Multiple Protocols**: Supports both a custom socket-based transfer protocol and the standard SFTP protocol.
--   **User Authentication**: Robust user registration, login, and session management system with secure password hashing.
--   **Real-time Monitoring**: Live progress bars and status updates for file transfers.
--   **Audit Logging**: Comprehensive logging of all file transfers and security-related events.
--   **Intuitive GUI**: A clean and easy-to-use graphical user interface built with Tkinter/PyQt.
--   **Database Integration**: Uses SQLite/PostgreSQL for user management and transfer history.
--   **Concurrent Transfers**: Supports multiple file transfers simultaneously using threading.
--   **Resume Capability**: Ability to resume interrupted file transfers.
+- **Encrypted transfer** — file contents protected with AES-256 during transmission
+- **Two protocols** — custom socket-based transfer and standard SFTP (Paramiko)
+- **User authentication** — registration and login with securely hashed passwords
+- **Audit logging** — file-transfer and security events written to `logs/`
+- **Transfer history** — user accounts and transfer records stored in SQLite
+- **Desktop GUI** — PyQt5 interface with login, file browser, and per-transfer progress
 
 ## Project Structure
 
-```
-/encrypted_file_transfer/
-├── src/
-│   ├── core/
-│   │   ├── encryption.py
-│   │   ├── file_transfer.py
-│   │   ├── sftp_client.py
-│   │   └── authentication.py
-│   ├── gui/
-│   │   ├── main_window.py
-│   │   ├── login_dialog.py
-│   │   ├── transfer_progress.py
-│   │   └── file_browser.py
-│   ├── database/
-│   │   ├── models.py
-│   │   ├── user_manager.py
-│   │   └── audit_logger.py
-│   ├── utils/
-│   │   ├── config.py
-│   │   ├── logger.py
-│   │   └── helpers.py
-│   └── main.py
-├── config/
-│   ├── settings.json
-│   ├── encryption_config.json
-│   └── database.db
-├── tests/
-├── docs/
-├── requirements.txt
-└── README.md
-```
+    src/
+    ├── core/        # encryption, transfer logic, SFTP client, authentication
+    ├── gui/         # main window, login dialog, progress view, file browser
+    ├── database/    # models, user management, audit logger
+    ├── utils/       # config, logging, helpers
+    └── main.py      # entry point
+    config/          # settings + encryption config
+    tests/
+    docs/
 
 ## Getting Started
 
-### Prerequisites
+**Prerequisites:** Python 3.8+ (dependencies in `requirements.txt`)
 
--   Python 3.8+
--   See `requirements.txt` for a full list of dependencies.
-
-### Installation
-
-1.  Clone the repository:
-    ```bash
-    git clone https://example.com/your-repo.git
-    ```
-2.  Navigate to the project directory:
-    ```bash
-    cd encrypted_file_transfer
-    ```
-3.  Install the required packages:
-    ```bash
+    git clone https://github.com/devesh-bhayani/Encrypted-File-Transfer-Application.git
+    cd Encrypted-File-Transfer-Application
     pip install -r requirements.txt
-    ```
-4.  Run the application:
-    ```bash
     python src/main.py
-    ```
 
-## Usage
+On first run, register a user account, then log in to send or receive files.
 
-Detailed usage instructions will be provided in the user documentation.
+## Security Notes
 
-## Contributing
-
-Contributions are welcome! Please follow the standard fork, branch, and pull request workflow.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+- File contents are encrypted with AES-256 before transmission
+- Passwords are stored only as salted hashes, never in plaintext
+- All transfer and authentication events are audit-logged
